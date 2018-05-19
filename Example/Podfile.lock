@@ -1,0 +1,16 @@
+PODS:
+  - JSONObjectMapper (0.1.0)
+
+DEPENDENCIES:
+  - JSONObjectMapper (from `../`)
+
+EXTERNAL SOURCES:
+  JSONObjectMapper:
+    :path: ../
+
+SPEC CHECKSUMS:
+  JSONObjectMapper: 51a46b31e77da97716b3fee1ae77f7712d49d5ac
+
+PODFILE CHECKSUM: 4dfb8d667eaddb9480fae183b6f1f0b3b8f0306e
+
+COCOAPODS: 1.4.0

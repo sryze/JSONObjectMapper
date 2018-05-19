@@ -1,0 +1,9 @@
+use_frameworks!
+
+target 'JSONObjectMapper_Example' do
+  pod 'JSONObjectMapper', :path => '../'
+
+  target 'JSONObjectMapper_Tests' do
+    inherit! :search_paths
+  end
+end

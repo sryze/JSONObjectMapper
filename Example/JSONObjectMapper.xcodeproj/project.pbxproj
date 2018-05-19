@@ -20,8 +20,13 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		6DF3B63C20B0BA1500CD5BC6 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF3B63220B0BA1400CD5BC6 /* Comment.m */; };
+		6DF3B63D20B0BA1500CD5BC6 /* Example.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6DF3B63320B0BA1400CD5BC6 /* Example.xcdatamodeld */; };
+		6DF3B63E20B0BA1500CD5BC6 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF3B63820B0BA1500CD5BC6 /* Post.m */; };
+		6DF3B63F20B0BA1500CD5BC6 /* TypeSafeCasting.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF3B63920B0BA1500CD5BC6 /* TypeSafeCasting.m */; };
+		6DF3B64020B0BA1500CD5BC6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF3B63A20B0BA1500CD5BC6 /* User.m */; };
+		6DF3B64120B0BA1500CD5BC6 /* DateTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF3B63B20B0BA1500CD5BC6 /* DateTransformer.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
-		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		ACB1A13E4AC0983671296AA7 /* Pods_JSONObjectMapper_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D701B738C1DEF57ABB18F44 /* Pods_JSONObjectMapper_Example.framework */; };
 		CDDB1D4D4596331E4A36409E /* Pods_JSONObjectMapper_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF4502B09C4B863E4DF009A9 /* Pods_JSONObjectMapper_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -62,8 +67,18 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		607CF96F4E70E5CAF7B8A2E4 /* JSONObjectMapper.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JSONObjectMapper.podspec; path = ../JSONObjectMapper.podspec; sourceTree = "<group>"; };
+		6DF3B63020B0BA1400CD5BC6 /* TypeSafeCasting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeSafeCasting.h; sourceTree = "<group>"; };
+		6DF3B63120B0BA1400CD5BC6 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		6DF3B63220B0BA1400CD5BC6 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		6DF3B63420B0BA1400CD5BC6 /* Example.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Example.xcdatamodel; sourceTree = "<group>"; };
+		6DF3B63520B0BA1400CD5BC6 /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
+		6DF3B63620B0BA1400CD5BC6 /* DateTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateTransformer.h; sourceTree = "<group>"; };
+		6DF3B63720B0BA1500CD5BC6 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		6DF3B63820B0BA1500CD5BC6 /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
+		6DF3B63920B0BA1500CD5BC6 /* TypeSafeCasting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeSafeCasting.m; sourceTree = "<group>"; };
+		6DF3B63A20B0BA1500CD5BC6 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		6DF3B63B20B0BA1500CD5BC6 /* DateTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateTransformer.m; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D701B738C1DEF57ABB18F44 /* Pods_JSONObjectMapper_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JSONObjectMapper_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9033D2B4823F31748182551 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		EF4502B09C4B863E4DF009A9 /* Pods_JSONObjectMapper_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JSONObjectMapper_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,10 +149,20 @@
 			children = (
 				6003F59C195388D20070C39A /* AppDelegate.h */,
 				6003F59D195388D20070C39A /* AppDelegate.m */,
+				6DF3B63720B0BA1500CD5BC6 /* Comment.h */,
+				6DF3B63220B0BA1400CD5BC6 /* Comment.m */,
+				6DF3B63620B0BA1400CD5BC6 /* DateTransformer.h */,
+				6DF3B63B20B0BA1500CD5BC6 /* DateTransformer.m */,
+				6DF3B63320B0BA1400CD5BC6 /* Example.xcdatamodeld */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
-				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
+				6DF3B63520B0BA1400CD5BC6 /* Post.h */,
+				6DF3B63820B0BA1500CD5BC6 /* Post.m */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				6DF3B63020B0BA1400CD5BC6 /* TypeSafeCasting.h */,
+				6DF3B63920B0BA1500CD5BC6 /* TypeSafeCasting.m */,
+				6DF3B63120B0BA1400CD5BC6 /* User.h */,
+				6DF3B63A20B0BA1500CD5BC6 /* User.m */,
 				6003F5A5195388D20070C39A /* ViewController.h */,
 				6003F5A6195388D20070C39A /* ViewController.m */,
 			);
@@ -279,7 +304,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
@@ -403,9 +427,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DF3B64020B0BA1500CD5BC6 /* User.m in Sources */,
 				6003F59E195388D20070C39A /* AppDelegate.m in Sources */,
+				6DF3B64120B0BA1500CD5BC6 /* DateTransformer.m in Sources */,
+				6DF3B63E20B0BA1500CD5BC6 /* Post.m in Sources */,
 				6003F5A7195388D20070C39A /* ViewController.m in Sources */,
+				6DF3B63F20B0BA1500CD5BC6 /* TypeSafeCasting.m in Sources */,
+				6DF3B63D20B0BA1500CD5BC6 /* Example.xcdatamodeld in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				6DF3B63C20B0BA1500CD5BC6 /* Comment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -659,6 +689,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6DF3B63320B0BA1400CD5BC6 /* Example.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6DF3B63420B0BA1400CD5BC6 /* Example.xcdatamodel */,
+			);
+			currentVersion = 6DF3B63420B0BA1400CD5BC6 /* Example.xcdatamodel */;
+			path = Example.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6003F582195388D10070C39A /* Project object */;
 }

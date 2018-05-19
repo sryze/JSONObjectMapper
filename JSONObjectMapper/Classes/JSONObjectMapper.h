@@ -28,7 +28,7 @@
 
 /// JSONObjectMapper maps JSON objects and arrays to managed objects.
 ///
-/// \see JSONMappingSupport
+/// \see JSONMappingProtocol
 ///
 @interface JSONObjectMapper : NSObject
 

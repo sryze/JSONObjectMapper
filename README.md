@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/cocoapods/l/JSONObjectMapper.svg?style=flat)](http://cocoapods.org/pods/JSONObjectMapper)
 [![Platform](https://img.shields.io/cocoapods/p/JSONObjectMapper.svg?style=flat)](http://cocoapods.org/pods/JSONObjectMapper)
 
-## What is it?
+## What is this?
 
 JSONObjectMapper was made to easily convert JSON data, for example data received from a web service API, into Core Data objects. This frees you from writing the same boilerplate code manually over and over again.
 
@@ -96,11 +96,47 @@ If you want to perform some addition conversion of attribute values you can use 
 For instance, if you're using an API that returns relative file URLs everywhere and you want to convert them to absolute URLs you could do it like this:
 
 ```objective-c
+@interface FileURLTransformer : NSValueTransformer
+
+- (instancetype)initWithBaseURL:(NSURL *)baseURL;
+
+@interface FileURLTransformer ()
+
+@property (nonatomic, readonly) NSURL *baseURL;
+
+@end
+
+@implementation FileURLTransformer
+
++ (Class)transformedValueClass {
+    return [NSString class];
+}
+
++ (BOOL)allowsReverseTransformation {
+    return NO;
+}
+
+- (instancetype)initWithBaseURL:(NSURL *)baseURL {
+    if (self = [super init]) {
+        _baseURL = baseURL;
+    }
+    return self;
+}
+
+- (id)transformedValue:(id)value {
+    NSString *relativeURLString = value;
+    if (relativeURLString.length != 0) {
+        return [NSURL URLWithString:relativeURLString relativeToURL:self.baseURL];
+    }
+    return nil;
+}
+
+@end
 ```
 
 ## Author
 
-Sergey Zolotarev, sryze01@gmail.com
+Sergey Zolotarev, sryze@protonmail.com
 
 ## License
 

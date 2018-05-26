@@ -10,7 +10,16 @@ JSONObjectMapper was made to easily convert JSON data, for example data received
 
 JSONObjectMapper uses an efficient algorithm for fetching objects from Core Data such that rather than retrieving each object individually by ID after seeing it in JSON it first cibverts the input JSON trett into an intermediate representation and then fetches managed objects in batches (grouped by entity). This is much faster than some simple implementations of other JSON mappers.
 
-## Usage
+## Installation
+
+JSONObjectMapper is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'JSONObjectMapper'
+```
+
+## Example
 
 In order to use JSONObjectMapper, you need to modify your model classes (subclasses of `NSManagedObject`) to return some metadata about their entities that describes how to map JSON properties to Core Data entity attributes and relationsihps and also which attribute to use as a unique key to identify objects.
 
@@ -75,19 +84,6 @@ How to map JSON data to Core Data objects (new or existing objects):
 ```
 
 See the [example](Example/JSONObjectMapper) project for a complete example.
-
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Installation
-
-JSONObjectMapper is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'JSONObjectMapper'
-```
 
 ## Custom attribute transformers
 

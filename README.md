@@ -89,9 +89,11 @@ it, simply add the following line to your Podfile:
 pod 'JSONObjectMapper'
 ```
 
-# Custom attribute transformers
+## Custom attribute transformers
 
-If you want to perform some addition conversion of attribute values you can use custom value transformers (subclasses of `NSValueTransformer`).
+If you want to perform some additional conversion of attribute values on many model classes, one way is to use custom value transformers (subclasses of `NSValueTransformer`). You can register value transformers on your `JSONObjectMapper` instance and refer to them in your Core Data model via User Defined Attributes using `JSONValueTransformer` as the key and the name of your transformer class as the value.
+
+![Screenshot](model-attributes-transformer.png)
 
 For instance, if you're using an API that returns relative file URLs everywhere and you want to convert them to absolute URLs you could do it like this:
 
@@ -132,6 +134,12 @@ For instance, if you're using an API that returns relative file URLs everywhere 
 }
 
 @end
+```
+
+And then somewhere during initialization of your mapper:
+
+```objective-c
+[objectMapper setValueTransformer:fileURLTransformer forName:@"FileURLTransformer"];
 ```
 
 ## Author

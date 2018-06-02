@@ -66,7 +66,7 @@ How to map JSON data to Core Data objects (new or existing objects):
             NSLog(@"Error fetching data from API: %@", error);
             return;
         }
-        
+
         NSError *JSONError;
         NSDictionary *responseDictionary =
             [NSJSONSerialization JSONObjectWithData:data options:0 error:&JSONError];
@@ -75,7 +75,7 @@ How to map JSON data to Core Data objects (new or existing objects):
             NSLog(@"Could not parse JSON data: %@", JSONError);
             return;
         }
-        
+
         NSArray<Post *> *posts = [objectMapper mapArray:responseDictionary[@"posts"]
                                           toEntityClass:Post.class];
         ...
@@ -141,6 +141,16 @@ And then somewhere during initialization of your mapper:
 ## Author
 
 Sergey Zolotarev, sryze@protonmail.com
+
+## Changelog
+
+### 0.1.1
+
+Updated the README with more information and examples
+
+### 0.1.0
+
+Initial release
 
 ## License
 

@@ -89,7 +89,7 @@ See the [example](Example/JSONObjectMapper) project for a complete example.
 
 If you want to perform some additional conversion of attribute values on many model classes, one way is to use custom value transformers (subclasses of `NSValueTransformer`). You can register value transformers on your `JSONObjectMapper` instance and refer to them in your Core Data model via User Defined Attributes using `JSONValueTransformer` as the key and the name of your transformer class as the value.
 
-![Screenshot](model-attributes-transformer.png)
+![Screenshot](https://github.com/sryze/JSONObjectMapper/blob/master/model-attributes-transformer.png)
 
 For instance, if you're using an API that returns relative file URLs everywhere and you want to convert them to absolute URLs you could do it like this:
 

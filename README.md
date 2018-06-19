@@ -4,11 +4,13 @@
 [![License](https://img.shields.io/cocoapods/l/JSONObjectMapper.svg?style=flat)](http://cocoapods.org/pods/JSONObjectMapper)
 [![Platform](https://img.shields.io/cocoapods/p/JSONObjectMapper.svg?style=flat)](http://cocoapods.org/pods/JSONObjectMapper)
 
-## What is this?
+## Introduction
 
-JSONObjectMapper was made to easily convert JSON data, for example data received from a web service API, into Core Data objects. This frees you from writing the same boilerplate code manually over and over again.
+JSONObjectMapper can efficiently convert JSON objects into corresponding Core Data objects by using your custom mapping definitions. This frees you from writing the same boilerplate code manually over and over again.
 
-JSONObjectMapper uses an efficient algorithm for fetching objects from Core Data such that rather than retrieving each object individually by ID after seeing it in JSON it first cibverts the input JSON trett into an intermediate representation and then fetches managed objects in batches (grouped by entity). This is much faster than some simple implementations of other JSON mappers.
+FYI, unlike some other implementations, rather than fetch each individual object one by one as the JSON data is being processed, JSONObjectMapper converts it into an intermediate internal representation first, and then fetches the necessary objects in groups by entity, which is way faster.
+
+In order to avoid creation of duplicate objects, each JSON object that maps to an entity must have a "primary key" attribute, and the entity must have a corresponding attribute that maps to that primary key. This key uniquely identifies each object in your Core Data store (it should be unique per entity).
 
 ## Installation
 

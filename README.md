@@ -21,13 +21,12 @@ pod 'JSONObjectMapper'
 
 ## Example
 
-In order to use JSONObjectMapper, you need to modify your model classes (subclasses of `NSManagedObject`) to return some metadata about their entities that describes how to map JSON properties to Core Data entity attributes and relationsihps. For instance, to avoid creation of duplicate objects, each entity should have a "primary key" attribute, and JSON objects mapped to this entity should also contain a non-null value for the primary key.
+In order to use JSONObjectMapper, you need to modify your model classes (subclasses of `NSManagedObject`) to return some metadata about their entities that describes how to map JSON properties to Core Data entity attributes and relationsihps. For instance, to avoid creation of duplicate objects, each entity should have a **primary key** attribute, and JSON objects mapped to this entity should also contain a non-null value for the key.
 
 Here is an example of how to add mapping support to a class:
 
 ```objective-c
-// In the most basic case, all you need to do is implement these two methods
-// of the JSONMappingProtocol protocol:
+// In general, you will implement these two methods of the JSONMappingProtocol protocol:
 
 + (JSONObjectMapping *)defaultMapping {
     // Return an object mapping that consists of attribute and relationship
@@ -51,7 +50,7 @@ Here is an example of how to add mapping support to a class:
 @end
 ```
 
-How to map JSON data to Core Data objects (new or existing objects):
+How to map JSON data to managed objects:
 
 ```objective-c
     JSONObjectMapper *objectMapper = [[JSONObjectMapper alloc]

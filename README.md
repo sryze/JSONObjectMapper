@@ -6,11 +6,9 @@
 
 ## Introduction
 
-JSONObjectMapper can efficiently convert JSON objects into corresponding Core Data objects by using your custom mapping definitions. This frees you from writing the same boilerplate code manually over and over again.
+JSONObjectMapper can efficiently map JSON objects to corresponding Core Data managed objects by using your custom mapping definitions. It frees you from writing the same boilerplate code over and over again.
 
-FYI, unlike some other implementations, rather than fetch each individual object one by one as the JSON data is being processed, JSONObjectMapper converts it into an intermediate internal representation first, and then fetches the necessary objects in groups by entity, which is way faster.
-
-In order to avoid creation of duplicate objects, each JSON object that maps to an entity must have a "primary key" attribute, and the entity must have a corresponding attribute that maps to that primary key. This key uniquely identifies each object in your Core Data store (it should be unique per entity).
+It's also fast. Unlike some other implementations, rather than fetch each individual object as needed while JSON is being processed, this mapper converts it into an intermediate internal representation and then fetches the necessary objects by ID grouped by entity, which is a lot more efficient.
 
 ## Installation
 
@@ -23,9 +21,9 @@ pod 'JSONObjectMapper'
 
 ## Example
 
-In order to use JSONObjectMapper, you need to modify your model classes (subclasses of `NSManagedObject`) to return some metadata about their entities that describes how to map JSON properties to Core Data entity attributes and relationsihps and also which attribute to use as a unique key to identify objects.
+In order to use JSONObjectMapper, you need to modify your model classes (subclasses of `NSManagedObject`) to return some metadata about their entities that describes how to map JSON properties to Core Data entity attributes and relationsihps. For instance, to avoid creation of duplicate objects, each entity should have a "primary key" attribute, and JSON objects mapped to this entity should also contain a non-null value for the primary key.
 
-Here is an example of how to add mapping support to your Core Data entity class:
+Here is an example of how to add mapping support to a class:
 
 ```objective-c
 // In the most basic case, all you need to do is implement these two methods

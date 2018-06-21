@@ -8,7 +8,7 @@
 
 JSONObjectMapper can efficiently map JSON objects to corresponding Core Data managed objects by using your custom mapping definitions. It frees you from writing the same boilerplate code over and over again.
 
-It's also fast. Unlike some other implementations, rather than fetch each individual object as needed while JSON is being processed, this mapper converts it into an intermediate internal representation and then fetches the necessary objects by ID grouped by entity, which is a lot more efficient.
+It's also fast. Unlike some other implementations, rather than fetch each individual object as needed while JSON is being processed, this mapper converts it into an intermediate internal representation and then fetches the necessary objects in "buckets" (grouped by entity), which is a lot more efficient.
 
 ## Installation
 

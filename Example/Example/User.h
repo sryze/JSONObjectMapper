@@ -17,7 +17,7 @@
 @property (nonatomic) NSNumber *userID;
 @property (nonatomic) NSString *username;
 @property (nonatomic) NSString *email;
-@property (nonatomic) NSOrderedSet<Post *> *posts;
-@property (nonatomic) NSOrderedSet<Comment *> *comments;
+@property (nonatomic) NSSet<Post *> *posts;
+@property (nonatomic) NSSet<Comment *> *comments;
 
 @end

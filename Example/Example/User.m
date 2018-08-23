@@ -6,8 +6,8 @@
 //  Copyright © 2018 Sergey. All rights reserved.
 //
 
-#import "User.h"
 #import <JSONObjectMapper/JSONObjectMapping.h>
+#import "User.h"
 
 @implementation User
 

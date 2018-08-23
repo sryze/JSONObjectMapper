@@ -27,9 +27,12 @@ static NSString *const SomeAPIURL = @"https://gist.githubusercontent.com/sryze/f
 
     JSONObjectMapper *objectMapper = [[JSONObjectMapper alloc] initWithManagedObjectContext:self.managedObjectContext];
 
-    // Register a date transformer. You have to define a DateTransformer if you're mapping NSDate properties from JSON.
-    // Other types of transformers (custom transformers) are supported as well - use the Core Data model editor to set
-    // them via user-defined attributes on those entity attributes that you want to transform.
+    // Register a date transformer. You have to define a DateTransformer if you're mapping NSDate
+    // properties from JSON.
+    //
+    // Other types of transformers (custom transformers) are supported as well - use the Core Data model
+    // editor to set them via user-defined attributes on those entity attributes that you want to transform.
+    //
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.locale = [NSLocale localeWithLocaleIdentifier:@"en_US"];
     dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
@@ -58,9 +61,7 @@ static NSString *const SomeAPIURL = @"https://gist.githubusercontent.com/sryze/f
         
         NSArray<Post *> *posts = [objectMapper
                                   mapArray:[responseDictionary[@"posts"] asArray] toEntityClass:Post.class];
-        NSArray<User *> *users = [objectMapper
-                                  mapArray:[responseDictionary[@"users"] asArray] toEntityClass:User.class];
-        (void)users;
+        [objectMapper mapArray:[responseDictionary[@"users"] asArray] toEntityClass:User.class];
         
         // After mapping both posts and users, post and comment objects are actually connected to user objects (through
         // the author_id and user_id relationship in JSON, or author and user in the Core Data model).
@@ -68,7 +69,7 @@ static NSString *const SomeAPIURL = @"https://gist.githubusercontent.com/sryze/f
             NSLog(@"Post: postID=%@, content=%@, rating=%@, viewCount=%@, users.count=%d",
                   post.postID, post.content, post.rating, post.viewCount, 0);
             for (Comment *comment in post.comments) {
-                NSLog(@"- Ccomment: commentId=%@, message=%@, date=%@, user=%@",
+                NSLog(@"- Comment: commentId=%@, message=%@, date=%@, user=%@",
                       comment.commentID, comment.message, comment.date, comment.user.username);
             }
         }

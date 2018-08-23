@@ -22,7 +22,8 @@
     
     NSPersistentStoreCoordinator *persistentStoreCoordinator =
         [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:managedObjectModel];
-    NSManagedObjectContext *managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+    NSManagedObjectContext *managedObjectContext = [[NSManagedObjectContext alloc]
+                                                    initWithConcurrencyType:NSMainQueueConcurrencyType];
     managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator;
     
     ViewController *viewController = [[ViewController alloc] init];

@@ -6,9 +6,9 @@
 //  Copyright © 2018 Sergey. All rights reserved.
 //
 
-#import "Comment.h"
 #import <JSONObjectMapper/JSONObjectMapping.h>
 #import <JSONObjectMapper/JSONRelationshipMapping.h>
+#import "Comment.h"
 
 @implementation Comment
 

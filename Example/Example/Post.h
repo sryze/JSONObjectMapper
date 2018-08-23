@@ -19,6 +19,6 @@
 @property (nonatomic) NSNumber *rating;
 @property (nonatomic) NSNumber *viewCount;
 @property (nonatomic) User *author;
-@property (nonatomic) NSOrderedSet<Comment *> *comments;
+@property (nonatomic) NSSet<Comment *> *comments;
 
 @end

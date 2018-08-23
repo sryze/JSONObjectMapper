@@ -27,8 +27,7 @@ pod 'JSONObjectMapper'
 
 ## Swift
 
-JSONObjectMapper can be used by Swift code. In order to make it work you need
-to perfrom these stesp:
+JSONObjectMapper can be used in Swift code. To set this up: 
 
 1. Add a bridging header to your project with the following import statement:
 

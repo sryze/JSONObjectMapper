@@ -22,4 +22,5 @@ Pod::Spec.new do |s|
     'JSONObjectMapper/Classes/JSONObjectMapping.h',
     'JSONObjectMapper/Classes/JSONRelationshipMapping.h'
   ]
+  s.module_map = 'JSONObjectMapper/JSONObjectMapper.modulemap'
 end

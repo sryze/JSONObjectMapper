@@ -1,5 +1,5 @@
 PODS:
-  - JSONObjectMapper (0.1.1)
+  - JSONObjectMapper (0.1.2)
 
 DEPENDENCIES:
   - JSONObjectMapper (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  JSONObjectMapper: 6ad024165e94c04f1a6a76acc6a4ead6f33e5b24
+  JSONObjectMapper: a2bc473b75abf5df0b4472e1538b4094bab1f45f
 
 PODFILE CHECKSUM: a340055a293f302a19e149c67908e2f318cec3af
 

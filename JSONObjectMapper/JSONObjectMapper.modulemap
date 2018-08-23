@@ -1,0 +1,6 @@
+framework module JSONObjectMapper {
+    umbrella header "JSONObjectMapper-umbrella.h"
+    
+    export *
+    module * { export * }
+}

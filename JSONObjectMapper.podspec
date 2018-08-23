@@ -15,4 +15,11 @@ Pod::Spec.new do |s|
   s.source = { :git => 'https://github.com/sryze/JSONObjectMapper.git', :tag => s.version.to_s }
   s.ios.deployment_target = '8.0'
   s.source_files = 'JSONObjectMapper/Classes/**/*'
+  s.public_header_files = [
+    'JSONObjectMapper/Classes/JSONAttributeMapping.h',
+    'JSONObjectMapper/Classes/JSONMappingProtocol.h',
+    'JSONObjectMapper/Classes/JSONObjectMapper.h',
+    'JSONObjectMapper/Classes/JSONObjectMapping.h',
+    'JSONObjectMapper/Classes/JSONRelationshipMapping.h'
+  ]
 end

@@ -66,8 +66,8 @@ static NSString *const SomeAPIURL = @"https://gist.githubusercontent.com/sryze/f
         // After mapping both posts and users, post and comment objects are actually connected to user objects (through
         // the author_id and user_id relationship in JSON, or author and user in the Core Data model).
         for (Post *post in posts) {
-            NSLog(@"Post: postID=%@, content=%@, rating=%@, viewCount=%@, users.count=%d",
-                  post.postID, post.content, post.rating, post.viewCount, 0);
+            NSLog(@"Post: postID=%@, content=%@, rating=%@, viewCount=%@, author=%@",
+                  post.postID, post.content, post.rating, post.viewCount, post.author.username);
             for (Comment *comment in post.comments) {
                 NSLog(@"- Comment: commentId=%@, message=%@, date=%@, user=%@",
                       comment.commentID, comment.message, comment.date, comment.user.username);

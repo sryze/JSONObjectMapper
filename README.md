@@ -28,9 +28,9 @@ pod 'JSONObjectMapper'
 JSONObjectMapper can be used in Swift code. To set this up: 
 
 1. Importing Objective-C frameworks in Swift requires a little extra effort.
-   you have two options:
+   You have two options:
    
-   * Add a bridging header to your project with the following import 
+   * Add a bridging header to your project with with the following import 
      statement:
 
      ```objc

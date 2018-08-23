@@ -177,6 +177,12 @@ Sergey Zolotarev, sryze@protonmail.com
 
 ## Changelog
 
+### 0.1.2
+
+* Added a Swift example proejct
+* Updated README
+* Updated pod description
+
 ### 0.1.1
 
 Updated the README with more information and examples

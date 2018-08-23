@@ -1,12 +1,13 @@
 Pod::Spec.new do |s|
   s.name = 'JSONObjectMapper'
-  s.version = '0.1.1'
-  s.summary = 'JSON -> Core Data mapper for iOS (Objective-C)'
+  s.version = '0.1.2'
+  s.summary = 'JSON to Core Data mapper for iOS'
   s.description = <<-DESC
-    JSONObjectMapper allows you to automatically map JSON data to Core Data
-    entities in your Objective-C code by simply defining a single method that
-    returns a mapping configuration in your entity class. See the README for
-    more details and some examples.
+    JSONObjectMapper allows you to easily map JSON data to Core Data objects by
+    defining simple mappings in your classes without rewriting the same 
+    manual bolierplate conversion code over and over again. It's written in 
+    Objective-C but support Swift as well. See the README for more details and 
+    some examples.
   DESC
   s.homepage = 'https://github.com/sryze/JSONObjectMapper'
   s.license = { :type => 'MIT', :file => 'LICENSE' }

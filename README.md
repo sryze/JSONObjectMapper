@@ -1,27 +1,56 @@
 # JSONObjectMapper
 
-[![Version](https://img.shields.io/cocoapods/v/JSONObjectMapper.svg?style=flat)](http://cocoapods.org/pods/JSONObjectMapper)
-[![License](https://img.shields.io/cocoapods/l/JSONObjectMapper.svg?style=flat)](http://cocoapods.org/pods/JSONObjectMapper)
-[![Platform](https://img.shields.io/cocoapods/p/JSONObjectMapper.svg?style=flat)](http://cocoapods.org/pods/JSONObjectMapper)
+[![Version][version]][pod]
+[![License][license]][pod]
+[![Platform][platform]][pod]
 
 ## Introduction
 
-JSONObjectMapper can efficiently map JSON objects to corresponding Core Data managed objects by using your custom mapping definitions. It frees you from writing the same boilerplate code over and over again.
+JSONObjectMapper can efficiently map JSON objects to corresponding Core Data 
+managed objects by using your custom mapping definitions. It frees you from 
+writing the same boilerplate code over and over again.
 
-It's also fast. Unlike some other implementations, rather than fetch each individual object as needed while JSON is being processed, this mapper converts it into an intermediate internal representation and then fetches the necessary objects in "buckets" (grouped by entity), which is a lot more efficient.
+It's also pretty fast. Unlike some other implementations, rather than fetch 
+each individual object as needed while JSON is being processed, this mapper 
+converts it into an intermediate internal representation and then fetches the 
+necessary objects in "buckets" (grouped by entity), which is a lot more 
+efficient.
 
 ## Installation
 
-JSONObjectMapper is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+JSONObjectMapper is available through [CocoaPods](http://cocoapods.org). To 
+install it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'JSONObjectMapper'
 ```
 
+## Swift
+
+JSONObjectMapper can be used by Swift code. In order to make it work you need
+to perfrom these stesp:
+
+1. Add a bridging header to your project with the following import statement:
+
+   ```objc
+   #include <JSONObjectMapper/JSONObjectMapper.h>
+   ```
+
+   This will make JSONObjectMapper classes visible to your Swift code.
+   
+2. Mark your entity classes with `@objc(ClassName)` where `ClassName` is the
+   class name that you set in the entity properties in your Core Data model.
+
+[ExampleSwift](ExampleSwift) contains a complete example written in Swift.
+
 ## Example
 
-In order to use JSONObjectMapper, you need to modify your model classes (subclasses of `NSManagedObject`) to return some metadata about their entities that describes how to map JSON properties to Core Data entity attributes and relationsihps. For instance, to avoid creation of duplicate objects, each entity should have a **primary key** attribute, and JSON objects mapped to this entity should also contain a non-null value for the key.
+In order to use JSONObjectMapper, you need to modify your model classes 
+(subclasses of `NSManagedObject`) to return some metadata about their entities 
+that describes how to map JSON properties to Core Data entity attributes and 
+relationsihps. For instance, to avoid creation of duplicate objects, each 
+entity should have a **primary key** attribute, and JSON objects mapped to this
+entity should also contain a non-null value for the key.
 
 Here is an example of how to add mapping support to a class:
 
@@ -86,11 +115,17 @@ See the [example](Example/JSONObjectMapper) project for a complete example.
 
 ## Custom attribute transformers
 
-If you want to perform some additional conversion of attribute values on many model classes, one way is to use custom value transformers (subclasses of `NSValueTransformer`). You can register value transformers on your `JSONObjectMapper` instance and refer to them in your Core Data model via User Defined Attributes using `JSONValueTransformer` as the key and the name of your transformer class as the value.
+If you want to perform some additional conversion of attribute values on many 
+model classes, one way is to use custom value transformers (subclasses of 
+`NSValueTransformer`). You can register value transformers on your 
+`JSONObjectMapper` instance and refer to them in your Core Data model via User 
+Defined Attributes using `JSONValueTransformer` as the key and the name of your 
+transformer class as the value.
 
-![Screenshot](https://github.com/sryze/JSONObjectMapper/blob/master/model-attributes-transformer.png)
+![Screenshot][screenshot]
 
-For instance, if you're using an API that returns relative file URLs everywhere and you want to convert them to absolute URLs you could do it like this:
+For instance, if you're using an API that returns relative file URLs everywhere 
+and you want to convert them to absolute URLs you could do it like this:
 
 ```objective-c
 @interface FileURLTransformer : NSValueTransformer
@@ -153,4 +188,11 @@ Initial release
 
 ## License
 
-JSONObjectMapper is available under the MIT license. See the LICENSE file for more info.
+JSONObjectMapper is available under the MIT license. See the LICENSE file for 
+more info.
+
+[pod]: http://cocoapods.org/pods/JSONObjectMapper
+[version]: https://img.shields.io/cocoapods/v/JSONObjectMapper.svg?style=flat
+[license]: https://img.shields.io/cocoapods/l/JSONObjectMapper.svg?style=flat
+[platform]: https://img.shields.io/cocoapods/p/JSONObjectMapper.svg?style=flat
+[screenshot]: https://github.com/sryze/JSONObjectMapper/blob/master/model-attributes-transformer.png

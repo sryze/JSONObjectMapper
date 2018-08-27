@@ -1,6 +1,7 @@
 #import "JSONAttributeConverter.h"
 #import "JSONObjectMapper.h"
 
+NSString *const JSONDateTransformerName = @"DateTransformer";
 static NSString *const JSONValueTransformerKey = @"JSONValueTransformer";
 
 @interface JSONAttributeConverter ()
@@ -45,7 +46,7 @@ static NSString *const JSONValueTransformerKey = @"JSONValueTransformer";
 }
 
 - (NSDate *)dateFromJSONString:(NSString *)JSONString {
-    NSValueTransformer *dateTransformer = self.valueTransformers[@"DateTransformer"];
+    NSValueTransformer *dateTransformer = self.valueTransformers[JSONDateTransformerName];
     NSAssert(dateTransformer != nil, @"Date transformer is not set");
     return [dateTransformer transformedValue:JSONString];
 }

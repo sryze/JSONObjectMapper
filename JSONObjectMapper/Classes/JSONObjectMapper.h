@@ -2,6 +2,8 @@
 #import "JSONObjectMapping.h"
 #import "JSONRelationshipMapping.h"
 
+extern NSString *const JSONDateTransformerName;
+
 @class JSONObjectMapper;
 
 @protocol JSONObjectMapperDelegate <NSObject>

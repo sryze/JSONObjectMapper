@@ -37,7 +37,7 @@ static NSString *const SomeAPIURL = @"https://gist.githubusercontent.com/sryze/f
     dateFormatter.locale = [NSLocale localeWithLocaleIdentifier:@"en_US"];
     dateFormatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
     DateTransformer *dateTransformer = [[DateTransformer alloc] initWithDateFormatter:dateFormatter];
-    [objectMapper setValueTransformer:dateTransformer forName:@"DateTransformer"];
+    [objectMapper setValueTransformer:dateTransformer forName:JSONDateTransformerName];
     
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     configuration.requestCachePolicy = NSURLRequestReloadIgnoringCacheData;

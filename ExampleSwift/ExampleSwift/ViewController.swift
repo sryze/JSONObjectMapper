@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         dateFormatter.locale = Locale(identifier: "en_US")
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let dateTransformer = DateTransformer(dateFormatter: dateFormatter)
-        objectMapper.setValueTransformer(dateTransformer, forName: "DateTransformer")
+        objectMapper.setValueTransformer(dateTransformer, forName: JSONDateTransformerName)
         
         let configuration = URLSessionConfiguration.default
         configuration.requestCachePolicy = .reloadIgnoringCacheData

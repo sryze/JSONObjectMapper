@@ -45,9 +45,15 @@ JSONObjectMapper can be used in Swift code. To set this up:
      import JSONObjectMapper
      ```
    
-2. Mark your entity classes with `@objc(ClassName)` where `ClassName` is the
-   class name that you set in the entity properties in your Core Data model
-   (by default it's simply the name of your class).
+2. Add `@objc(ClassName)` annotations to your managed object classes so that
+   they can be found by Objective-C code:
+   
+   ```swift
+   @objc(Post)
+   class Post: NSManagedObject {
+       ...
+   }
+   ```
 
 [ExampleSwift](ExampleSwift) contains a complete example written in Swift.
 

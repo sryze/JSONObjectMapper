@@ -2,7 +2,7 @@
 
 typedef id (^JSONAttributeValueBlock)(NSManagedObject *object, NSDictionary *JSONDictionary);
 
-/// JSONAttributeMapping defines a mapping between a managed object attribute and a JSON property.
+/// JSONAttributeMapping defines a mapping between an attribute and a corresponding JSON property.
 ///
 @interface JSONAttributeMapping : NSObject
 

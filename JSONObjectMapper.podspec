@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'JSONObjectMapper'
-  s.version = '0.1.3'
+  s.version = '0.1.4'
   s.summary = 'JSON to Core Data mapper for iOS'
   s.description = <<-DESC
     JSONObjectMapper lets you to easily map JSON data to Core Data objects by

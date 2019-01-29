@@ -191,6 +191,10 @@ Sergey Zolotarev, sryze@protonmail.com
 
 ## Changelog
 
+### 0.1.5
+
+* Updated project description
+
 ### 0.1.3
 
 * Updated podspec

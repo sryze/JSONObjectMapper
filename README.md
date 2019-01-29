@@ -4,15 +4,14 @@
 [![License][license]][pod]
 [![Platform][platform]][pod]
 
-JSONObjectMapper can efficiently map JSON objects to corresponding Core Data 
-managed objects by using your custom mapping definitions. It frees you from 
-writing the same boilerplate code over and over again.
+JSONObjectMapper converts JSON objects to Core Data managed objects by using
+your custom mapping definitions. It frees you from writing the same 
+boilerplate code over and over again.
 
-It's also pretty fast. Unlike some other implementations, rather than fetch 
-each individual object as needed while JSON data is being processed, this 
-mapper converts JSON into an intermediate internal representation and then 
-fetches the necessary objects in "buckets" (grouped by entity), which is a 
-lot more efficient.
+It's also pretty fast: unlike some other implementations that map each object
+individually as they process JSON data, JSONObjectMapper converts the input
+object(s) into an intermediate internal representation and then fetches the
+necessary objects in "buckets" (grouped by entity), which is more efficient.
 
 ## Installation
 
